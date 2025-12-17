@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Метаданные страницы -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя первая страница</title>
+    
+    <!-- Подключаем стили (CSS) -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Подключаем шрифт из Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Главный контейнер -->
+    <div class="container">
+        <!-- Карточка профиля -->
+        <div class="card">
+            <!-- Аватар -->
+            <div class="avatar">
+                <span class="avatar-emoji">🚀</span>
+            </div>
+            
+            <!-- Имя -->
+            <h1 class="name">Привет, я учусь кодить!</h1>
+            
+            <!-- Описание -->
+            <p class="description">
+                Это моя первая страница, созданная с помощью AI.
+                Я изучаю HTML, CSS и JavaScript.
+            </p>
+            
+            <!-- Счётчик кликов -->
+            <div class="counter-section">
+                <p class="counter-label">Нажми на кнопку:</p>
+                <button id="clickButton" class="button">
+                    Клики: <span id="count">0</span>
+                </button>
+            </div>
+            
+            <!-- Навыки -->
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Node.js</span>
+            </div>
+        </div>
+        
+        <!-- Подсказка -->
+        <p class="hint">💡 Эта страница работает на твоём компьютере!</p>
+    </div>
+    
+    <!-- Подключаем JavaScript (логику) -->
+    <script src="script.js"></script>
+</body>
+</html>

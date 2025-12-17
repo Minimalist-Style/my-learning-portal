@@ -1,0 +1,197 @@
+/* ===== БАЗОВЫЕ НАСТРОЙКИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Шрифт из Google Fonts */
+    font-family: 'Inter', sans-serif;
+    
+    /* Градиентный фон */
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    
+    /* Минимальная высота на весь экран */
+    min-height: 100vh;
+    
+    /* Центрирование содержимого */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Отступы по краям */
+    padding: 20px;
+}
+
+/* ===== КОНТЕЙНЕР ===== */
+.container {
+    text-align: center;
+}
+
+/* ===== КАРТОЧКА ===== */
+.card {
+    /* Полупрозрачный фон (glassmorphism) */
+    background: rgba(255, 255, 255, 0.1);
+    
+    /* Размытие заднего фона */
+    backdrop-filter: blur(10px);
+    
+    /* Скругление углов */
+    border-radius: 24px;
+    
+    /* Внутренние отступы */
+    padding: 40px;
+    
+    /* Максимальная ширина */
+    max-width: 400px;
+    
+    /* Тень */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    
+    /* Рамка */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Анимация появления */
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* ===== АВАТАР ===== */
+.avatar {
+    width: 100px;
+    height: 100px;
+    
+    /* Градиентный фон */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    
+    /* Центрирование эмодзи */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Тень */
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    
+    /* Анимация при наведении */
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.avatar-emoji {
+    font-size: 48px;
+}
+
+/* ===== ТЕКСТ ===== */
+.name {
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ===== СЧЁТЧИК ===== */
+.counter-section {
+    margin-bottom: 25px;
+}
+
+.counter-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* ===== КНОПКА ===== */
+.button {
+    /* Градиентный фон */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    
+    /* Убираем стандартную рамку */
+    border: none;
+    
+    border-radius: 12px;
+    padding: 15px 40px;
+    
+    /* Курсор "рука" при наведении */
+    cursor: pointer;
+    
+    /* Плавные переходы */
+    transition: all 0.3s ease;
+    
+    /* Тень */
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.button:hover {
+    /* Увеличение при наведении */
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+.button:active {
+    /* Нажатие */
+    transform: translateY(0);
+}
+
+/* ===== НАВЫКИ ===== */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    
+    /* Рамка */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Анимация при наведении */
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    background: rgba(102, 126, 234, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ===== ПОДСКАЗКА ===== */
+.hint {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+/* ===== АНИМАЦИИ ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2: Flexbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="flexbox-demo.css">
+</head>
+
+<body>
+    <h1>🎯 Урок Flexbox</h1>
+
+    <!-- ===== ПРИМЕР 1: Основы ===== -->
+    <section class="lesson">
+        <h2>1. Базовый Flexbox</h2>
+        <p class="explanation">
+            <code>display: flex</code> — превращает контейнер во flex-контейнер.<br>
+            Все дети автоматически выстраиваются в ряд!
+        </p>
+
+        <!-- БЕЗ Flexbox -->
+        <h3>❌ Без Flexbox (элементы друг под другом):</h3>
+        <div class="container-normal">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+
+        <!-- С Flexbox -->
+        <h3>✅ С Flexbox (элементы в ряд):</h3>
+        <div class="container-flex">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+
+        <div class="code-block">
+            <strong>CSS код:</strong><br>
+            .container-flex {<br>
+            &nbsp;&nbsp;<span class="highlight">display: flex;</span><br>
+            }
+        </div>
+    </section>
+
+    <!-- ===== ПРИМЕР 2: justify-content ===== -->
+    <section class="lesson">
+        <h2>2. justify-content — горизонтальное выравнивание</h2>
+        <p class="explanation">
+            Как расположить элементы по горизонтали?
+        </p>
+
+        <h3>flex-start (по умолчанию — слева):</h3>
+        <div class="container-flex jc-start">
+            <div class="box small">1</div>
+            <div class="box small">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <h3>center (по центру):</h3>
+        <div class="container-flex jc-center">
+            <div class="box small">1</div>
+            <div class="box small">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <h3>flex-end (справа):</h3>
+        <div class="container-flex jc-end">
+            <div class="box small">1</div>
+            <div class="box small">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <h3>space-between (с равными промежутками):</h3>
+        <div class="container-flex jc-between">
+            <div class="box small">1</div>
+            <div class="box small">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <h3>space-around (промежутки вокруг):</h3>
+        <div class="container-flex jc-around">
+            <div class="box small">1</div>
+            <div class="box small">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <div class="code-block">
+            <strong>CSS код:</strong><br>
+            .container {<br>
+            &nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;<span class="highlight">justify-content: center;</span> /* или space-between, flex-end и т.д.
+            */<br>
+            }
+        </div>
+    </section>
+
+    <!-- ===== ПРИМЕР 3: align-items ===== -->
+    <section class="lesson">
+        <h2>3. align-items — вертикальное выравнивание</h2>
+        <p class="explanation">
+            Как выровнять элементы по вертикали?
+        </p>
+
+        <h3>flex-start (сверху):</h3>
+        <div class="container-flex tall ai-start">
+            <div class="box small">1</div>
+            <div class="box medium">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <h3>center (по центру):</h3>
+        <div class="container-flex tall ai-center">
+            <div class="box small">1</div>
+            <div class="box medium">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <h3>flex-end (снизу):</h3>
+        <div class="container-flex tall ai-end">
+            <div class="box small">1</div>
+            <div class="box medium">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <div class="code-block">
+            <strong>CSS код:</strong><br>
+            .container {<br>
+            &nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;<span class="highlight">align-items: center;</span><br>
+            }
+        </div>
+    </section>
+
+    <!-- ===== ПРИМЕР 4: Идеальное центрирование ===== -->
+    <section class="lesson">
+        <h2>4. 🎯 Идеальное центрирование (самый частый приём!)</h2>
+        <p class="explanation">
+            Центрирование элемента и по горизонтали, и по вертикали — это самая частая задача в вёрстке. С Flexbox это 3
+            строки!
+        </p>
+
+        <div class="container-flex tall perfect-center">
+            <div class="box">Я в центре!</div>
+        </div>
+
+        <div class="code-block">
+            <strong>CSS код:</strong><br>
+            .container {<br>
+            &nbsp;&nbsp;<span class="highlight">display: flex;</span><br>
+            &nbsp;&nbsp;<span class="highlight">justify-content: center;</span><br>
+            &nbsp;&nbsp;<span class="highlight">align-items: center;</span><br>
+            }
+        </div>
+    </section>
+
+    <!-- ===== ПРИМЕР 5: gap ===== -->
+    <section class="lesson">
+        <h2>5. gap — промежутки между элементами</h2>
+        <p class="explanation">
+            <code>gap</code> добавляет отступы между элементами (но не по краям!)
+        </p>
+
+        <h3>Без gap:</h3>
+        <div class="container-flex">
+            <div class="box small">1</div>
+            <div class="box small">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <h3>С gap: 20px:</h3>
+        <div class="container-flex with-gap">
+            <div class="box small">1</div>
+            <div class="box small">2</div>
+            <div class="box small">3</div>
+        </div>
+
+        <div class="code-block">
+            <strong>CSS код:</strong><br>
+            .container {<br>
+            &nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;<span class="highlight">gap: 20px;</span><br>
+            }
+        </div>
+    </section>
+
+    <!-- ===== ПРИМЕР 6: flex-wrap ===== -->
+    <section class="lesson">
+        <h2>6. flex-wrap — перенос на новую строку</h2>
+        <p class="explanation">
+            Если элементы не помещаются — они переносятся!
+        </p>
+
+        <div class="container-flex with-wrap with-gap">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+
+        <div class="code-block">
+            <strong>CSS код:</strong><br>
+            .container {<br>
+            &nbsp;&nbsp;display: flex;<br>
+            &nbsp;&nbsp;<span class="highlight">flex-wrap: wrap;</span><br>
+            &nbsp;&nbsp;gap: 20px;<br>
+            }
+        </div>
+    </section>
+
+    <!-- ===== ПРАКТИКА ===== -->
+    <section class="lesson practice">
+        <h2>🔨 Практика: Карточки товаров</h2>
+        <p class="explanation">
+            Вот реальный пример — сетка карточек товаров, сделанная на Flexbox:
+        </p>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">📱</div>
+                <h3 class="product-title">iPhone 15</h3>
+                <p class="product-price">99 990 ₽</p>
+                <button class="product-button">Купить</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">💻</div>
+                <h3 class="product-title">MacBook Pro</h3>
+                <p class="product-price">199 990 ₽</p>
+                <button class="product-button">Купить</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🎧</div>
+                <h3 class="product-title">AirPods Pro</h3>
+                <p class="product-price">24 990 ₽</p>
+                <button class="product-button">Купить</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <h3 class="product-title">Apple Watch</h3>
+                <p class="product-price">39 990 ₽</p>
+                <button class="product-button">Купить</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Шпаргалка -->
+    <section class="lesson cheatsheet">
+        <h2>📋 Шпаргалка Flexbox</h2>
+        <table>
+            <tr>
+                <th>Свойство</th>
+                <th>Что делает</th>
+                <th>Пример</th>
+            </tr>
+            <tr>
+                <td><code>display: flex</code></td>
+                <td>Включает Flexbox</td>
+                <td>Обязательно!</td>
+            </tr>
+            <tr>
+                <td><code>justify-content</code></td>
+                <td>Горизонталь ↔️</td>
+                <td>center, space-between</td>
+            </tr>
+            <tr>
+                <td><code>align-items</code></td>
+                <td>Вертикаль ↕️</td>
+                <td>center, flex-start</td>
+            </tr>
+            <tr>
+                <td><code>gap</code></td>
+                <td>Промежутки</td>
+                <td>20px, 1rem</td>
+            </tr>
+            <tr>
+                <td><code>flex-wrap</code></td>
+                <td>Перенос строк</td>
+                <td>wrap</td>
+            </tr>
+            <tr>
+                <td><code>flex-direction</code></td>
+                <td>Направление</td>
+                <td>row, column</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List — Список задач</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <!-- 
+        🎓 СТРУКТУРА TO-DO ПРИЛОЖЕНИЯ:
+        
+        1. Заголовок
+        2. Форма для добавления задач (input + button)
+        3. Список задач (ul)
+        4. Счётчик задач
+    -->
+
+    <div class="app">
+        <!-- Заголовок -->
+        <h1>📝 Мои задачи</h1>
+
+        <!-- Форма добавления задачи -->
+        <!-- 
+            🎓 ВАЖНО: 
+            - <form> группирует поля ввода
+            - <input> — поле для текста
+            - <button type="submit"> — кнопка отправки формы
+        -->
+        <form id="todoForm" class="todo-form">
+            <input type="text" id="todoInput" class="todo-input" placeholder="Что нужно сделать?" required>
+            <button type="submit" class="todo-button">
+                Добавить
+            </button>
+        </form>
+
+        <!-- Счётчик задач -->
+        <div class="todo-stats">
+            <span>Всего: <strong id="totalCount">0</strong></span>
+            <span>Выполнено: <strong id="doneCount">0</strong></span>
+        </div>
+
+        <!-- Список задач -->
+        <!-- 
+            🎓 ВАЖНО:
+            - <ul> — неупорядоченный список (unordered list)
+            - <li> — элемент списка (list item)
+            - Задачи будут добавляться сюда через JavaScript!
+        -->
+        <ul id="todoList" class="todo-list">
+            <!-- Сюда JavaScript будет добавлять задачи -->
+        </ul>
+
+        <!-- Подсказка когда список пуст -->
+        <p id="emptyMessage" class="empty-message">
+            ✨ Добавь свою первую задачу!
+        </p>
+    </div>
+
+    <!-- Подключаем JavaScript -->
+    <script src="todo.js"></script>
+</body>
+
+</html>

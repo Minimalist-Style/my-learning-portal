@@ -1,0 +1,276 @@
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== СЕКЦИЯ УРОКА ===== */
+.lesson {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lesson h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.lesson h3 {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 20px 0 10px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.explanation {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.explanation code {
+    background: rgba(102, 126, 234, 0.3);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #a5b4fc;
+}
+
+/* ===== КОНТЕЙНЕРЫ ДЛЯ ДЕМО ===== */
+.container-normal {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.container-flex {
+    display: flex;
+    /* ← ВОТ ОНО! Главное свойство */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ===== КОРОБКИ (ЭЛЕМЕНТЫ) ===== */
+.box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.box.small {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+}
+
+.box.medium {
+    height: 100px;
+}
+
+/* ===== JUSTIFY-CONTENT (горизонталь) ===== */
+.jc-start {
+    justify-content: flex-start;
+    /* слева */
+}
+
+.jc-center {
+    justify-content: center;
+    /* по центру */
+}
+
+.jc-end {
+    justify-content: flex-end;
+    /* справа */
+}
+
+.jc-between {
+    justify-content: space-between;
+    /* равные промежутки, прижато к краям */
+}
+
+.jc-around {
+    justify-content: space-around;
+    /* промежутки вокруг каждого */
+}
+
+/* ===== ALIGN-ITEMS (вертикаль) ===== */
+.tall {
+    height: 150px;
+    /* делаем контейнер выше чтобы было видно */
+}
+
+.ai-start {
+    align-items: flex-start;
+    /* сверху */
+}
+
+.ai-center {
+    align-items: center;
+    /* по центру */
+}
+
+.ai-end {
+    align-items: flex-end;
+    /* снизу */
+}
+
+/* ===== ИДЕАЛЬНОЕ ЦЕНТРИРОВАНИЕ ===== */
+.perfect-center {
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+}
+
+/* ===== GAP (промежутки) ===== */
+.with-gap {
+    gap: 20px;
+}
+
+/* ===== FLEX-WRAP (перенос) ===== */
+.with-wrap {
+    flex-wrap: wrap;
+}
+
+/* ===== БЛОК С КОДОМ ===== */
+.code-block {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    border-left: 4px solid #667eea;
+}
+
+.code-block .highlight {
+    color: #a5b4fc;
+    background: rgba(102, 126, 234, 0.2);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* ===== ПРАКТИКА: КАРТОЧКИ ТОВАРОВ ===== */
+.practice {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+.products-grid {
+    display: flex;
+    /* Flexbox! */
+    flex-wrap: wrap;
+    /* Перенос на новую строку */
+    gap: 20px;
+    /* Промежутки */
+    justify-content: center;
+    /* По центру */
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #a5b4fc;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.product-button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== ШПАРГАЛКА ===== */
+.cheatsheet {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(33, 150, 243, 0.1) 100%);
+}
+
+.cheatsheet table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.cheatsheet th,
+.cheatsheet td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cheatsheet th {
+    background: rgba(255, 255, 255, 0.1);
+    color: #667eea;
+}
+
+.cheatsheet code {
+    background: rgba(102, 126, 234, 0.3);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #a5b4fc;
+}

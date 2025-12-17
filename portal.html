@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Мой Путь в Программирование</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portal.css">
+</head>
+
+<body>
+    <!-- Боковое меню -->
+    <nav class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">🎯</span>
+            <span class="logo-text">Мой Путь</span>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="#dashboard" class="nav-link active">📊 Дашборд</a></li>
+            <li><a href="#roadmap" class="nav-link">🗺️ Путь к заработку</a></li>
+            <li><a href="#lessons" class="nav-link">📚 Уроки</a></li>
+            <li><a href="#tools" class="nav-link">🛠️ Инструменты</a></li>
+            <li><a href="#resources" class="nav-link">💎 Ресурсы</a></li>
+            <li><a href="#notes" class="nav-link">📝 Заметки</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <p>Начало: 16.12.2025</p>
+            <p class="progress-text">Прогресс: <span id="progressPercent">15%</span></p>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+
+        <!-- ===== ДАШБОРД ===== -->
+        <section id="dashboard" class="section">
+            <h1 class="section-title">📊 Дашборд</h1>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Дней обучения</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Уроков пройдено</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📁</div>
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Проектов создано</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value">~25</div>
+                    <div class="stat-label">Дней до первого заказа</div>
+                </div>
+            </div>
+
+            <!-- Прогресс бар -->
+            <div class="progress-section">
+                <h3>Общий прогресс к цели</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 15%"></div>
+                </div>
+                <div class="progress-labels">
+                    <span>Начало</span>
+                    <span>Основы</span>
+                    <span>React</span>
+                    <span>Портфолио</span>
+                    <span>💰 Заработок</span>
+                </div>
+            </div>
+
+            <!-- Текущие задачи -->
+            <div class="current-tasks">
+                <h3>🔥 Текущие задачи</h3>
+                <div class="task-list">
+                    <div class="task-item in-progress">
+                        <span class="task-status">В процессе</span>
+                        <span class="task-text">Изучить JavaScript: переменные, функции, DOM</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-status">Следующее</span>
+                        <span class="task-text">Сделать проект с сохранением данных</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-status">Скоро</span>
+                        <span class="task-text">Изучить React (основы)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ПУТЬ К ЗАРАБОТКУ ===== -->
+        <section id="roadmap" class="section">
+            <h1 class="section-title">🗺️ Путь к заработку</h1>
+
+            <div class="roadmap">
+                <!-- Этап 1 -->
+                <div class="roadmap-stage completed">
+                    <div class="stage-marker">✅</div>
+                    <div class="stage-content">
+                        <h3>Этап 1: Основы (Неделя 1-2)</h3>
+                        <ul>
+                            <li class="done">HTML — структура страниц</li>
+                            <li class="done">CSS — стилизация, Flexbox</li>
+                            <li class="done">JavaScript — основы</li>
+                            <li>JavaScript — DOM, события</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Этап 2 -->
+                <div class="roadmap-stage current">
+                    <div class="stage-marker">🔄</div>
+                    <div class="stage-content">
+                        <h3>Этап 2: Практика (Неделя 3-4)</h3>
+                        <ul>
+                            <li>Проект: To-Do List с сохранением</li>
+                            <li>Проект: Калькулятор</li>
+                            <li>Проект: Погодное приложение (API)</li>
+                            <li>Git + GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Этап 3 -->
+                <div class="roadmap-stage">
+                    <div class="stage-marker">⏳</div>
+                    <div class="stage-content">
+                        <h3>Этап 3: React (Неделя 5-6)</h3>
+                        <ul>
+                            <li>Компоненты, JSX</li>
+                            <li>useState, useEffect</li>
+                            <li>Проект на React</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Этап 4 -->
+                <div class="roadmap-stage">
+                    <div class="stage-marker">⏳</div>
+                    <div class="stage-content">
+                        <h3>Этап 4: Портфолио (Неделя 7)</h3>
+                        <ul>
+                            <li>3 проекта на GitHub</li>
+                            <li>Сайт-портфолио</li>
+                            <li>Резюме разработчика</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Этап 5 -->
+                <div class="roadmap-stage goal">
+                    <div class="stage-marker">💰</div>
+                    <div class="stage-content">
+                        <h3>Этап 5: Первый заработок (Неделя 8+)</h3>
+                        <ul>
+                            <li>Регистрация на фриланс-биржах</li>
+                            <li>Первые отклики на заказы</li>
+                            <li>Первые деньги! 🎉</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Таблица способов заработка -->
+            <div class="earnings-table">
+                <h3>💰 Способы заработка по уровням</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Уровень</th>
+                            <th>Что делать</th>
+                            <th>Где искать</th>
+                            <th>Доход</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="level-1">
+                            <td><span class="level-badge">Новичок</span></td>
+                            <td>Лендинги, визитки, вёрстка</td>
+                            <td>Kwork, FL.ru, Telegram</td>
+                            <td>3-15k ₽/проект</td>
+                        </tr>
+                        <tr class="level-2">
+                            <td><span class="level-badge">Средний</span></td>
+                            <td>React сайты, Telegram боты</td>
+                            <td>Хабр Фриланс, Upwork</td>
+                            <td>50-150k ₽/мес</td>
+                        </tr>
+                        <tr class="level-3">
+                            <td><span class="level-badge">Про</span></td>
+                            <td>SaaS, AI-интеграции, приложения</td>
+                            <td>Прямые клиенты, агентства</td>
+                            <td>200k+ ₽/мес</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Горячие ниши -->
+            <div class="hot-niches">
+                <h3>🔥 Горячие ниши 2025</h3>
+                <div class="niche-cards">
+                    <div class="niche-card">
+                        <span class="niche-icon">🤖</span>
+                        <h4>AI-ассистенты</h4>
+                        <p>Каждый бизнес хочет своего ChatGPT</p>
+                    </div>
+                    <div class="niche-card">
+                        <span class="niche-icon">📱</span>
+                        <h4>Telegram-боты</h4>
+                        <p>Весь бизнес переехал в Telegram</p>
+                    </div>
+                    <div class="niche-card">
+                        <span class="niche-icon">⚡</span>
+                        <h4>Автоматизация</h4>
+                        <p>n8n, Zapier — экономят время</p>
+                    </div>
+                    <div class="niche-card">
+                        <span class="niche-icon">📄</span>
+                        <h4>Лендинги</h4>
+                        <p>Бесконечный спрос от инфобизнеса</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== УРОКИ ===== -->
+        <section id="lessons" class="section">
+            <h1 class="section-title">📚 Пройденные уроки</h1>
+
+            <div class="lessons-grid">
+                <!-- Урок 1 -->
+                <div class="lesson-card completed">
+                    <div class="lesson-header">
+                        <span class="lesson-number">01</span>
+                        <span class="lesson-status">✅ Пройден</span>
+                    </div>
+                    <h3>Основы HTML, CSS, JavaScript</h3>
+                    <p class="lesson-date">16 декабря 2025</p>
+                    <div class="lesson-topics">
+                        <span class="topic">HTML теги</span>
+                        <span class="topic">CSS стили</span>
+                        <span class="topic">Переменные</span>
+                        <span class="topic">Функции</span>
+                    </div>
+                    <a href="index.html" class="lesson-link">Открыть проект →</a>
+                </div>
+
+                <!-- Урок 2 -->
+                <div class="lesson-card completed">
+                    <div class="lesson-header">
+                        <span class="lesson-number">02</span>
+                        <span class="lesson-status">✅ Пройден</span>
+                    </div>
+                    <h3>Flexbox — расположение элементов</h3>
+                    <p class="lesson-date">17 декабря 2025</p>
+                    <div class="lesson-topics">
+                        <span class="topic">display: flex</span>
+                        <span class="topic">justify-content</span>
+                        <span class="topic">align-items</span>
+                        <span class="topic">gap</span>
+                    </div>
+                    <a href="flexbox-demo.html" class="lesson-link">Открыть проект →</a>
+                </div>
+
+                <!-- Урок 3 -->
+                <div class="lesson-card completed">
+                    <div class="lesson-header">
+                        <span class="lesson-number">03</span>
+                        <span class="lesson-status">✅ Пройден</span>
+                    </div>
+                    <h3>JavaScript: To-Do List</h3>
+                    <p class="lesson-date">17 декабря 2025</p>
+                    <div class="lesson-topics">
+                        <span class="topic">Массивы</span>
+                        <span class="topic">DOM</span>
+                        <span class="topic">События</span>
+                        <span class="topic">forEach</span>
+                    </div>
+                    <a href="todo.html" class="lesson-link">Открыть проект →</a>
+                </div>
+
+                <!-- Следующий урок -->
+                <div class="lesson-card upcoming">
+                    <div class="lesson-header">
+                        <span class="lesson-number">04</span>
+                        <span class="lesson-status">⏳ Следующий</span>
+                    </div>
+                    <h3>LocalStorage — сохранение данных</h3>
+                    <p class="lesson-date">Скоро</p>
+                    <div class="lesson-topics">
+                        <span class="topic">localStorage</span>
+                        <span class="topic">JSON</span>
+                        <span class="topic">Персистентность</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ИНСТРУМЕНТЫ ===== -->
+        <section id="tools" class="section">
+            <h1 class="section-title">🛠️ Мои инструменты</h1>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">📦</div>
+                    <h4>Node.js</h4>
+                    <p>v24.12.0</p>
+                    <span class="tool-purpose">Запуск JavaScript</span>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">📚</div>
+                    <h4>npm</h4>
+                    <p>v11.6.2</p>
+                    <span class="tool-purpose">Менеджер пакетов</span>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🔀</div>
+                    <h4>Git</h4>
+                    <p>v2.52.0</p>
+                    <span class="tool-purpose">Контроль версий</span>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🐍</div>
+                    <h4>Python</h4>
+                    <p>v3.14.2</p>
+                    <span class="tool-purpose">Скрипты, боты</span>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">💻</div>
+                    <h4>VS Code</h4>
+                    <p>v1.106.3</p>
+                    <span class="tool-purpose">Редактор кода</span>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🤖</div>
+                    <h4>Antigravity</h4>
+                    <p>AI помощник</p>
+                    <span class="tool-purpose">Кодинг с AI</span>
+                </div>
+            </div>
+
+            <!-- Шпаргалка по командам -->
+            <div class="commands-cheatsheet">
+                <h3>⌨️ Шпаргалка по командам</h3>
+                <div class="commands-grid">
+                    <div class="command">
+                        <code>ls</code>
+                        <span>Показать файлы в папке</span>
+                    </div>
+                    <div class="command">
+                        <code>npm init -y</code>
+                        <span>Создать package.json</span>
+                    </div>
+                    <div class="command">
+                        <code>npm install пакет</code>
+                        <span>Установить библиотеку</span>
+                    </div>
+                    <div class="command">
+                        <code>npx serve .</code>
+                        <span>Запустить веб-сервер</span>
+                    </div>
+                    <div class="command">
+                        <code>start file.html</code>
+                        <span>Открыть в браузере</span>
+                    </div>
+                    <div class="command">
+                        <code>git init</code>
+                        <span>Создать репозиторий</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== РЕСУРСЫ ===== -->
+        <section id="resources" class="section">
+            <h1 class="section-title">💎 Полезные ресурсы</h1>
+
+            <div class="resources-grid">
+                <div class="resource-category">
+                    <h3>📖 Документация</h3>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/ru/" target="_blank">MDN Web Docs</a></li>
+                        <li><a href="https://learn.javascript.ru/" target="_blank">JavaScript.ru</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h3>🎮 Игры для обучения</h3>
+                    <ul>
+                        <li><a href="https://flexboxfroggy.com/#ru" target="_blank">Flexbox Froggy</a></li>
+                        <li><a href="https://cssgridgarden.com/#ru" target="_blank">CSS Grid Garden</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h3>💼 Фриланс-биржи</h3>
+                    <ul>
+                        <li><a href="https://kwork.ru" target="_blank">Kwork</a></li>
+                        <li><a href="https://fl.ru" target="_blank">FL.ru</a></li>
+                        <li><a href="https://freelance.habr.com" target="_blank">Хабр Фриланс</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h3>🎥 YouTube каналы</h3>
+                    <ul>
+                        <li>Владилен Минин</li>
+                        <li>Ulbi TV</li>
+                        <li>АйТиБорода</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ЗАМЕТКИ ===== -->
+        <section id="notes" class="section">
+            <h1 class="section-title">📝 Важные заметки</h1>
+
+            <div class="notes-container">
+                <div class="note important">
+                    <h4>🧠 Главный инсайт про AI</h4>
+                    <p>Человек БЕЗ навыков + AI = Что-то простое<br>
+                        Человек С навыками + AI = В 10 РАЗ БОЛЬШЕ</p>
+                    <p><strong>Ты учишься не "вместо AI", а "вместе с AI"</strong></p>
+                </div>
+
+                <div class="note">
+                    <h4>📊 Структура веб-проекта</h4>
+                    <p><strong>HTML</strong> = скелет (ЧТО на странице)<br>
+                        <strong>CSS</strong> = одежда (КАК выглядит)<br>
+                        <strong>JavaScript</strong> = мозг (КАК реагирует)
+                    </p>
+                </div>
+
+                <div class="note">
+                    <h4>🎯 Flexbox центрирование</h4>
+                    <code>display: flex; justify-content: center; align-items: center;</code>
+                    <p>Центрирует всё по горизонтали и вертикали!</p>
+                </div>
+
+                <div class="note">
+                    <h4>⏱️ Реалистичные сроки</h4>
+                    <p>Базовое понимание: 2-4 недели<br>
+                        Простые проекты: 2-3 месяца<br>
+                        Уверенное владение: 6-12 месяцев</p>
+                </div>
+
+                <div class="note future">
+                    <h4>🔮 Про будущее технологий</h4>
+                    <p>HTML/CSS/JS — стандарт 25+ лет. Не устареет.<br>
+                        Логика программирования переносится на любой язык.<br>
+                        <strong>Это фундамент на всю карьеру.</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="portal.js"></script>
+</body>
+
+</html>
