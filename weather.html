@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌤️ Погода — API Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <!-- 
+        🎓 УРОК: РАБОТА С API
+        
+        API (Application Programming Interface) — способ получения данных 
+        с внешних серверов. Мы будем получать реальную погоду!
+        
+        Используем fetch() — встроенную функцию JavaScript для HTTP-запросов.
+    -->
+
+    <div class="app">
+        <h1>🌤️ Погода в мире</h1>
+        <p class="subtitle">Введи название города и узнай погоду</p>
+
+        <!-- Форма поиска -->
+        <form id="searchForm" class="search-form">
+            <input type="text" id="cityInput" class="city-input" placeholder="Например: Москва" required>
+            <button type="submit" class="search-button">🔍</button>
+            <!-- Кнопка геолокации -->
+            <button type="button" id="geoButton" class="geo-button" title="Моё местоположение">📍</button>
+        </form>
+
+        <!-- Блок загрузки -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Загружаю погоду...</p>
+        </div>
+
+        <!-- Блок ошибки -->
+        <div id="error" class="error hidden">
+            <p>❌ <span id="errorMessage">Город не найден</span></p>
+        </div>
+
+        <!-- Карточка погоды (скрыта по умолчанию) -->
+        <div id="weatherCard" class="weather-card hidden">
+            <div class="weather-header">
+                <div class="location">
+                    <h2 id="cityName">Москва</h2>
+                    <p id="country">Россия</p>
+                </div>
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+            </div>
+
+            <div class="temperature">
+                <span id="temp" class="temp-value">+15</span>
+                <span class="temp-unit">°C</span>
+            </div>
+
+            <p id="description" class="description">Ясно</p>
+
+            <div class="details">
+                <div class="detail-item">
+                    <span class="detail-icon">💨</span>
+                    <span class="detail-label">Ветер</span>
+                    <span id="wind" class="detail-value">5 м/с</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">💧</span>
+                    <span class="detail-label">Влажность</span>
+                    <span id="humidity" class="detail-value">60%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🌡️</span>
+                    <span class="detail-label">Ощущается</span>
+                    <span id="feelsLike" class="detail-value">+13°C</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Быстрые кнопки городов -->
+        <div class="quick-cities">
+            <p>Популярные города:</p>
+            <div class="city-buttons">
+                <button class="city-btn" data-city="Moscow">Москва</button>
+                <button class="city-btn" data-city="London">Лондон</button>
+                <button class="city-btn" data-city="New York">Нью-Йорк</button>
+                <button class="city-btn" data-city="Tokyo">Токио</button>
+                <button class="city-btn" data-city="Dubai">Дубай</button>
+            </div>
+        </div>
+
+        <!-- Время намаза -->
+        <div id="prayerCard" class="prayer-card hidden">
+            <h3>🕌 Время намаза</h3>
+            <div class="prayer-times">
+                <div class="prayer-item">
+                    <span class="prayer-name">Фаджр</span>
+                    <span id="fajr" class="prayer-time">--:--</span>
+                </div>
+                <div class="prayer-item">
+                    <span class="prayer-name">Восход</span>
+                    <span id="sunrise" class="prayer-time">--:--</span>
+                </div>
+                <div class="prayer-item">
+                    <span class="prayer-name">Зухр</span>
+                    <span id="dhuhr" class="prayer-time">--:--</span>
+                </div>
+                <div class="prayer-item">
+                    <span class="prayer-name">Аср</span>
+                    <span id="asr" class="prayer-time">--:--</span>
+                </div>
+                <div class="prayer-item">
+                    <span class="prayer-name">Магриб</span>
+                    <span id="maghrib" class="prayer-time">--:--</span>
+                </div>
+                <div class="prayer-item">
+                    <span class="prayer-name">Иша</span>
+                    <span id="isha" class="prayer-time">--:--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>
