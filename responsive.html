@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- ВАЖНО: viewport meta tag для адаптивности -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📱 Адаптивный дизайн — Урок</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- 
+        🎓 УРОК: АДАПТИВНЫЙ ДИЗАЙН
+        
+        Изучим:
+        1. Meta viewport — обязательно для мобильных
+        2. Media Queries — меняем стили для разных экранов
+        3. Mobile-first — сначала для телефона, потом для ПК
+        4. Гибкие единицы — %, vw, vh, rem
+    -->
+
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">📱 Адаптивный дизайн</h1>
+            <nav class="nav">
+                <a href="#basics">Основы</a>
+                <a href="#cards">Карточки</a>
+                <a href="#grid">Сетка</a>
+            </nav>
+            <!-- Бургер меню для мобильных -->
+            <button class="burger" id="burger">☰</button>
+        </div>
+    </header>
+
+    <!-- Главная секция -->
+    <section class="hero">
+        <div class="container">
+            <h2>Сайт адаптируется под любой экран</h2>
+            <p>Измени размер окна браузера и смотри как меняется дизайн!</p>
+
+            <!-- Индикатор размера экрана -->
+            <div class="screen-indicator">
+                <span class="indicator mobile">📱 Мобильный</span>
+                <span class="indicator tablet">📱 Планшет</span>
+                <span class="indicator desktop">💻 Десктоп</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция основы -->
+    <section id="basics" class="section">
+        <div class="container">
+            <h2>1️⃣ Основы Media Queries</h2>
+
+            <div class="code-example">
+                <pre>
+/* Mobile-first: сначала стили для телефона */
+.element {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Планшет (от 768px) */
+@media (min-width: 768px) {
+    .element {
+        width: 50%;
+        padding: 20px;
+    }
+}
+
+/* Десктоп (от 1024px) */
+@media (min-width: 1024px) {
+    .element {
+        width: 33.33%;
+        padding: 30px;
+    }
+}
+                </pre>
+            </div>
+
+            <div class="breakpoints">
+                <h3>📏 Стандартные breakpoints:</h3>
+                <ul>
+                    <li><code>576px</code> — большие телефоны</li>
+                    <li><code>768px</code> — планшеты</li>
+                    <li><code>992px</code> — ноутбуки</li>
+                    <li><code>1200px</code> — десктопы</li>
+                    <li><code>1400px</code> — большие экраны</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция карточки -->
+    <section id="cards" class="section section-alt">
+        <div class="container">
+            <h2>2️⃣ Адаптивные карточки</h2>
+            <p class="section-desc">На телефоне — 1 колонка, на планшете — 2, на ПК — 3</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🌤️</div>
+                    <h3>Погода</h3>
+                    <p>Приложение для просмотра погоды в любом городе мира</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">✅</div>
+                    <h3>To-Do List</h3>
+                    <p>Список задач с сохранением в LocalStorage</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🕌</div>
+                    <h3>Время намаза</h3>
+                    <p>Точное время молитв для любого города</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Анимации</h3>
+                    <p>Красивые CSS эффекты и переходы</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Портал</h3>
+                    <p>Персональный обучающий дашборд</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>И многое другое</h3>
+                    <p>Продолжаем учиться каждый день!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция сетка -->
+    <section id="grid" class="section">
+        <div class="container">
+            <h2>3️⃣ CSS Grid для адаптивности</h2>
+
+            <div class="grid-demo">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+
+            <div class="code-example">
+                <pre>
+/* Магия auto-fit + minmax */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Это автоматически адаптируется! */
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Шпаргалка -->
+    <section class="section cheatsheet">
+        <div class="container">
+            <h2>📝 Шпаргалка</h2>
+
+            <div class="cheat-grid">
+                <div class="cheat-item">
+                    <h4>Viewport Meta</h4>
+                    <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+                </div>
+                <div class="cheat-item">
+                    <h4>Media Query</h4>
+                    <code>@media (min-width: 768px) { ... }</code>
+                </div>
+                <div class="cheat-item">
+                    <h4>Гибкие единицы</h4>
+                    <ul>
+                        <li><code>%</code> — процент от родителя</li>
+                        <li><code>vw</code> — процент от ширины окна</li>
+                        <li><code>vh</code> — процент от высоты окна</li>
+                        <li><code>rem</code> — относительно корневого шрифта</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>Сделано во время обучения 🚀</p>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        const burger = document.getElementById('burger');
+        const nav = document.querySelector('.nav');
+
+        burger.addEventListener('click', function () {
+            nav.classList.toggle('nav-open');
+        });
+    </script>
+</body>
+
+</html>

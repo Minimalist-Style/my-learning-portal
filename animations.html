@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 CSS Анимации — Урок</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+    <!-- 
+        🎓 УРОК: CSS АНИМАЦИИ
+        
+        В этом уроке изучим:
+        1. transition — плавные переходы
+        2. transform — трансформации (поворот, масштаб)
+        3. @keyframes — полные анимации
+    -->
+
+    <div class="container">
+        <h1>🎨 CSS Анимации</h1>
+        <p class="subtitle">Наведи на элементы чтобы увидеть эффекты</p>
+
+        <!-- ===== СЕКЦИЯ 1: TRANSITION ===== -->
+        <section class="section">
+            <h2>1️⃣ Transition (Переходы)</h2>
+            <p class="description">transition делает любое изменение плавным</p>
+
+            <div class="demo-grid">
+                <div class="demo-card hover-color">
+                    <span>Цвет</span>
+                    <code>background-color</code>
+                </div>
+                <div class="demo-card hover-scale">
+                    <span>Масштаб</span>
+                    <code>transform: scale</code>
+                </div>
+                <div class="demo-card hover-shadow">
+                    <span>Тень</span>
+                    <code>box-shadow</code>
+                </div>
+                <div class="demo-card hover-rotate">
+                    <span>Поворот</span>
+                    <code>transform: rotate</code>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <pre>
+/* Базовый синтаксис */
+.element {
+    transition: property duration timing-function;
+}
+
+/* Примеры */
+.box {
+    transition: all 0.3s ease;           /* Всё за 0.3 сек */
+    transition: background 0.5s ease-in; /* Только фон */
+    transition: transform 0.2s ease-out; /* Только трансформ */
+}
+                </pre>
+            </div>
+        </section>
+
+        <!-- ===== СЕКЦИЯ 2: TRANSFORM ===== -->
+        <section class="section">
+            <h2>2️⃣ Transform (Трансформации)</h2>
+            <p class="description">transform изменяет форму, размер и положение</p>
+
+            <div class="demo-grid">
+                <div class="demo-card transform-translate">
+                    <span>Сдвиг</span>
+                    <code>translate(X, Y)</code>
+                </div>
+                <div class="demo-card transform-scale">
+                    <span>Масштаб</span>
+                    <code>scale(1.2)</code>
+                </div>
+                <div class="demo-card transform-rotate">
+                    <span>Поворот</span>
+                    <code>rotate(45deg)</code>
+                </div>
+                <div class="demo-card transform-skew">
+                    <span>Наклон</span>
+                    <code>skew(10deg)</code>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <pre>
+/* Трансформации */
+.box:hover {
+    transform: translateX(20px);    /* Сдвиг вправо */
+    transform: translateY(-10px);   /* Сдвиг вверх */
+    transform: scale(1.1);          /* Увеличить на 10% */
+    transform: rotate(45deg);       /* Повернуть на 45° */
+    transform: skewX(10deg);        /* Наклонить */
+}
+
+/* Можно комбинировать */
+.box:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+                </pre>
+            </div>
+        </section>
+
+        <!-- ===== СЕКЦИЯ 3: KEYFRAMES ===== -->
+        <section class="section">
+            <h2>3️⃣ @keyframes (Анимации)</h2>
+            <p class="description">Полный контроль над анимацией</p>
+
+            <div class="demo-grid animations">
+                <div class="demo-card animate-pulse">
+                    <span>Пульс</span>
+                    <code>pulse</code>
+                </div>
+                <div class="demo-card animate-bounce">
+                    <span>Прыжок</span>
+                    <code>bounce</code>
+                </div>
+                <div class="demo-card animate-shake">
+                    <span>Тряска</span>
+                    <code>shake</code>
+                </div>
+                <div class="demo-card animate-spin">
+                    <span>Вращение</span>
+                    <code>spin</code>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <pre>
+/* Определяем анимацию */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Применяем */
+.element {
+    animation: pulse 2s ease infinite;
+    /*         имя | время | тип | повтор */
+}
+                </pre>
+            </div>
+        </section>
+
+        <!-- ===== СЕКЦИЯ 4: ПРАКТИКА ===== -->
+        <section class="section">
+            <h2>4️⃣ Практика: Кнопки</h2>
+
+            <div class="buttons-demo">
+                <button class="btn btn-basic">Базовая</button>
+                <button class="btn btn-glow">Свечение</button>
+                <button class="btn btn-3d">3D Эффект</button>
+                <button class="btn btn-slide">Слайд</button>
+                <button class="btn btn-ripple">Волна</button>
+            </div>
+        </section>
+
+        <!-- ===== ШПАРГАЛКА ===== -->
+        <section class="section cheatsheet">
+            <h2>📝 Шпаргалка</h2>
+
+            <div class="cheat-grid">
+                <div class="cheat-item">
+                    <h4>Timing Functions</h4>
+                    <ul>
+                        <li><code>ease</code> — плавно</li>
+                        <li><code>ease-in</code> — медленный старт</li>
+                        <li><code>ease-out</code> — медленный конец</li>
+                        <li><code>ease-in-out</code> — оба</li>
+                        <li><code>linear</code> — постоянная скорость</li>
+                    </ul>
+                </div>
+                <div class="cheat-item">
+                    <h4>Transform</h4>
+                    <ul>
+                        <li><code>translate(x, y)</code></li>
+                        <li><code>scale(n)</code></li>
+                        <li><code>rotate(deg)</code></li>
+                        <li><code>skew(deg)</code></li>
+                    </ul>
+                </div>
+                <div class="cheat-item">
+                    <h4>Animation свойства</h4>
+                    <ul>
+                        <li><code>animation-name</code></li>
+                        <li><code>animation-duration</code></li>
+                        <li><code>animation-iteration-count</code></li>
+                        <li><code>animation-direction</code></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

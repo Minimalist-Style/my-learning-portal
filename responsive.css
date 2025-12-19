@@ -1,0 +1,401 @@
+/* =====================================================
+   🎓 АДАПТИВНЫЙ ДИЗАЙН — Mobile-First подход
+   
+   Принцип: сначала пишем стили для телефона,
+   потом добавляем @media для больших экранов
+   ===================================================== */
+
+/* ===== БАЗОВЫЕ СТИЛИ (для ТЕЛЕФОНА) ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f1a;
+    color: white;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* Отступы по бокам на телефоне */
+}
+
+/* ===== ХЕДЕР ===== */
+.header {
+    background: rgba(15, 15, 26, 0.95);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Навигация — скрыта на телефоне */
+.nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1a1a2e;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav.nav-open {
+    display: flex;
+}
+
+.nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #4facfe;
+}
+
+/* Бургер меню — видно на телефоне */
+.burger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===== HERO СЕКЦИЯ ===== */
+.hero {
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+/* Индикатор размера экрана */
+.screen-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.indicator {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.3;
+}
+
+/* На телефоне показываем "Мобильный" */
+.indicator.mobile {
+    opacity: 1;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* ===== СЕКЦИИ ===== */
+.section {
+    padding: 40px 0;
+}
+
+.section-alt {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #4facfe;
+}
+
+.section-desc {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 25px;
+}
+
+/* ===== КАРТОЧКИ (1 колонка на телефоне) ===== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 колонка */
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(79, 172, 254, 0.2);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* ===== GRID ДЕМО ===== */
+.grid-demo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 колонки на телефоне */
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.grid-item {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ===== КОД ===== */
+.code-example {
+    background: #0d1117;
+    border-radius: 12px;
+    padding: 20px;
+    overflow-x: auto;
+    margin-bottom: 25px;
+}
+
+.code-example pre {
+    font-family: 'Consolas', monospace;
+    font-size: 0.8rem;
+    color: #c9d1d9;
+    white-space: pre-wrap;
+}
+
+/* ===== BREAKPOINTS СПИСОК ===== */
+.breakpoints {
+    background: rgba(79, 172, 254, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.breakpoints h3 {
+    margin-bottom: 15px;
+}
+
+.breakpoints ul {
+    list-style: none;
+}
+
+.breakpoints li {
+    padding: 8px 0;
+}
+
+.breakpoints code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* ===== ШПАРГАЛКА ===== */
+.cheatsheet {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05));
+}
+
+.cheat-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.cheat-item {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.cheat-item h4 {
+    color: #10b981;
+    margin-bottom: 10px;
+}
+
+.cheat-item code {
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    word-break: break-all;
+}
+
+.cheat-item ul {
+    list-style: none;
+}
+
+.cheat-item li {
+    padding: 5px 0;
+}
+
+/* ===== ФУТЕР ===== */
+.footer {
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =====================================================
+   📱 ПЛАНШЕТ (от 768px)
+   ===================================================== */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    /* Навигация — показываем */
+    .nav {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        gap: 30px;
+        background: none;
+        padding: 0;
+    }
+
+    /* Бургер — скрываем */
+    .burger {
+        display: none;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    /* Индикатор "Планшет" активен */
+    .indicator.mobile {
+        opacity: 0.3;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .indicator.tablet {
+        opacity: 1;
+        background: linear-gradient(135deg, #f093fb, #f5576c);
+    }
+
+    /* Карточки — 2 колонки */
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Grid демо — 3 колонки */
+    .grid-demo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .cheat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================================
+   💻 ДЕСКТОП (от 1024px)
+   ===================================================== */
+@media (min-width: 1024px) {
+    .hero {
+        padding: 100px 0;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Индикатор "Десктоп" активен */
+    .indicator.tablet {
+        opacity: 0.3;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .indicator.desktop {
+        opacity: 1;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    /* Карточки — 3 колонки */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .cheat-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =====================================================
+   🖥️ БОЛЬШИЕ ЭКРАНЫ (от 1400px)
+   ===================================================== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+}

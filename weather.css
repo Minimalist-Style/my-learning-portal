@@ -340,3 +340,87 @@ h1 {
     font-weight: 700;
     color: #10b981;
 }
+
+
+/* =====================================================
+   📱 АДАПТИВНЫЙ ДИЗАЙН
+   ===================================================== */
+
+/* Маленькие телефоны (до 380px) */
+@media (max-width: 380px) {
+    .app {
+        padding: 20px 15px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .search-form {
+        flex-wrap: wrap;
+    }
+
+    .city-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-button,
+    .geo-button {
+        flex: 1;
+    }
+
+    .temp-value {
+        font-size: 3rem;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .prayer-times {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .city-buttons {
+        gap: 5px;
+    }
+
+    .city-btn {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Средние телефоны (380px - 480px) */
+@media (min-width: 381px) and (max-width: 480px) {
+    .app {
+        padding: 25px 20px;
+    }
+
+    .prayer-times {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Планшеты и больше (от 768px) */
+@media (min-width: 768px) {
+    body {
+        padding: 40px;
+    }
+
+    .app {
+        padding: 50px;
+        max-width: 500px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .temp-value {
+        font-size: 5rem;
+    }
+}
